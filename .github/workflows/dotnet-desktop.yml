@@ -27,9 +27,5 @@ jobs:
         dotnet-version: 8.0.x
     - name: Check .NET SDK version
       run: dotnet --list-sdks
-    - name: Restore project
-      run: dotnet restore
-    - name: Check ENV
-      run: dir C:\Users\runneradmin\AppData\Local\Microsoft\dotnet\sdk\8.0.201\
     - name: Build
       run: dotnet build --configuration ${{ matrix.configuration }}
