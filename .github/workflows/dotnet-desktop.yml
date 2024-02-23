@@ -14,7 +14,6 @@ jobs:
     strategy:
       matrix:
         configuration: [Debug, Release]
-        runtime: [win-x64, win-x86]
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -25,4 +24,4 @@ jobs:
     - name: Check .NET SDK version
       run: dotnet --version
     - name: Build
-      run: dotnet build --configuration ${{ matrix.configuration }} --runtime ${{ matrix.runtime }}
+      run: dotnet build --configuration ${{ matrix.configuration }}
