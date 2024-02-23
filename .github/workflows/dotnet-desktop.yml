@@ -25,15 +25,11 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 8.0.x
-    - name: Check .NET SDK version
-      run: dotnet --list-sdks
     - name: Build
       run: dotnet build --configuration ${{ matrix.configuration }}
     - name: Package File
-      uses: montudor/action-zip@v1
-      with:
-        args: zip -qq -r ${{ matrix.configuration }}.zip .\bin\x64\${{ matrix.configuration }}\
-    - name: Upload Build
+      run: Compress-Archive -Path ./bin/x64/${{ matrix.configuration }}/* -Destination ${{ matrix.configuration }}.zip
+    - name: Upload Built Package
       uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.configuration }}
