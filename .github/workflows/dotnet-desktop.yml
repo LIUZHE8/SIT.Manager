@@ -30,6 +30,6 @@ jobs:
     - name: Restore project
       run: dotnet restore
     - name: Check ENV
-      run: dir C:\Users\runneradmin\AppData\Local\Microsoft\dotnet\sdk\8.0.201\\Microsoft\VisualStudio\v17.0\AppxPackage\
+      run: dir C:\Users\runneradmin\AppData\Local\Microsoft\dotnet\sdk\8.0.201\
     - name: Build
       run: dotnet build --configuration ${{ matrix.configuration }}
