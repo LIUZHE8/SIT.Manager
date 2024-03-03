@@ -1,4 +1,4 @@
-#Deprecation
+# Deprecation
 ## This version of SIT.Manager will no longer be supported and maintained in this repository. Move to SIT.Manager.Avalonia for future feature and localisation updates.
 ## 此版本仓库的 SIT.Manager 将不再受支持。要获取未来的语言包与功能更新，请移步至 SIT.Manager.Avalonia。
 
