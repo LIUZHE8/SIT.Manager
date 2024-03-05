@@ -38,7 +38,7 @@ namespace SIT.Manager
             // Customize Window
             AppWindow.Resize(new(800, 475));
             AppWindow.SetIcon("Stay-In-Tarkov-512.ico");
-            Title = "SIT Æô¶¯Æ÷";
+            Title = "SIT å¯åŠ¨å™¨ Wicked by DR ç¦æ­¢å€’å–";
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(AppTitleBar);
 
@@ -87,7 +87,7 @@ namespace SIT.Manager
                 await Task.Delay(100);
             }
 
-            Utils.ShowInfoBarWithLogButton("´íÎó", "¶ÁÈ¡ÅäÖÃÎÄ¼şÊ±·¢Éú´íÎó¡£", InfoBarSeverity.Error, 30);
+            Utils.ShowInfoBarWithLogButton("é”™è¯¯", "è¯»å–é…ç½®æ–‡ä»¶æ—¶å‘ç”Ÿé”™è¯¯ã€‚", InfoBarSeverity.Error, 30);
         }
 
         /// <summary>
@@ -109,8 +109,8 @@ namespace SIT.Manager
                 {
                     DispatcherQueue.TryEnqueue(async () =>
                     {
-                        UpdateInfoBar.Title = "¸üĞÂ";
-                        UpdateInfoBar.Message = "GitHub »ã±¨ÁËÒ»¸ö SIT.Manager Æô¶¯Æ÷¸üĞÂ¡£(²»½¨ÒéÖĞ¹úÓÃ»§¸üĞÂ)";
+                        UpdateInfoBar.Title = "æ›´æ–°";
+                        UpdateInfoBar.Message = "GitHub æ±‡æŠ¥äº†ä¸€ä¸ª SIT.Manager å¯åŠ¨å™¨æ›´æ–°ã€‚(ä¸å»ºè®®ä¸­å›½ç”¨æˆ·æ›´æ–°)";
                         UpdateInfoBar.Severity = InfoBarSeverity.Informational;
 
                         UpdateInfoBar.IsOpen = true;
@@ -124,7 +124,7 @@ namespace SIT.Manager
             catch (Exception ex)
             {
                 Loggy.LogToFile("LookForUpdate: " + ex.Message);
-                Utils.ShowInfoBarWithLogButton("´íÎó", "ÎŞ·¨¼ì²é¸üĞÂ¡£", InfoBarSeverity.Error);
+                Utils.ShowInfoBarWithLogButton("é”™è¯¯", "æ— æ³•æ£€æŸ¥æ›´æ–°ã€‚", InfoBarSeverity.Error);
                 return;
             }
         }
@@ -165,7 +165,7 @@ namespace SIT.Manager
             FontFamily fontFamily = (FontFamily)Application.Current.Resources["BenderFont"];
 
             settings.FontFamily = fontFamily;
-            settings.Content = "ÉèÖÃ";
+            settings.Content = "è®¾ç½®";
             if (App.ManagerConfig?.InstallPath == null)
             {
                 settings.InfoBadge = new()
