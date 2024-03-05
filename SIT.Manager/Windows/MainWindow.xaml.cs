@@ -38,7 +38,7 @@ namespace SIT.Manager
             // Customize Window
             AppWindow.Resize(new(800, 475));
             AppWindow.SetIcon("Stay-In-Tarkov-512.ico");
-            Title = "SIT 启动器 Wicked by DR 禁止倒卖";
+            Title = "SIT 启动器 Wicked by DR 禁止倒卖 论坛 drnotdq.net";
             ExtendsContentIntoTitleBar = true;
             SetTitleBar(AppTitleBar);
 
